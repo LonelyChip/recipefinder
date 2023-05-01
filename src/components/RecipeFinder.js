@@ -9,7 +9,7 @@ function RecipeFinder() {
 
   const searchRecipes = async (e) => {
     e.preventDefault();
-    const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=ccef54d0775e4b43bac36c86ce26b060&ingredients=${query}`;
+    const url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=YOUR_KEY&ingredients=${query}`;
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -143,7 +143,7 @@ function RecipeFinder() {
           )}
           <button
             onClick={async () => {
-              const url = `https://api.spoonacular.com/recipes/${selectedRecipe.id}/information?apiKey=ccef54d0775e4b43bac36c86ce26b060&includeNutrition=false`;
+              const url = `https://api.spoonacular.com/recipes/${selectedRecipe.id}/information?apiKey=YOUR_KEY&includeNutrition=false`;
               try {
                 const res = await fetch(url);
                 const selectedRecipeDetails = await res.json();
